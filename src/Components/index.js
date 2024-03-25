@@ -11,6 +11,7 @@ import Login from "./Login";
 import PostForm
  from "./PostForm/PostForm";
 import PostCard from "./PostCard";
-import AuthLayout from "./AuthLayout"
+import AuthLayout from "./AuthLayout";
+import Input from "./Input"
 
-export {Header,Logo,Footer,Button,Container,LogoutButton,Select,RTE,Signup,Login,PostForm,PostCard,AuthLayout}
+export {Input,Header,Logo,Footer,Button,Container,LogoutButton,Select,RTE,Signup,Login,PostForm,PostCard,AuthLayout}
