@@ -17,11 +17,12 @@ function PostForm({post}) {
             status :post?.status || "active"
         }
     })
-    const userData = useSelector(state => state.user.userData)
+    const userData = useSelector(state => state.auth.userData)
 
     const submit = async (data)=>{
         if (post) {
-          const file =  data.image[0] ? appwriteSevice.uploadFile(data.image[0]):null
+            const file =  data.image[0] ? appwriteSevice.uploadFile(data.image[0]):null
+            
 
           if (file) {
             appwriteSevice.deleteFile(post.featuredImage)
@@ -38,6 +39,7 @@ function PostForm({post}) {
         }
         else{
             const file = await appwriteSevice.uploadFile(data.image[0]);
+          
             if (file) {
                 const fileId = file.$id
                 data.featuredImage = fileId
@@ -53,8 +55,8 @@ function PostForm({post}) {
 
     const slugTransform = useCallback((value)=>{
         if (value && typeof value ==='string') {
-            return value.trim().toLowerCase().replace(/^[a-zA-Z\d\s]+/g,'-').replace(/\s/g,'-')
-        
+            return value.trim().toLowerCase().replace(/[^a-zA-Z\d\s]+/g,'-').replace(/\s/g,'-')
+            
         }else return "";
     })
 
@@ -116,9 +118,10 @@ function PostForm({post}) {
            className ="mb-4"
            {...register("status",{required:true})}
          />
-            <Button type='submit' bgColor={post ? "bg-green-500":undefined} className='w-full'>
+            <Button type='submit' bgColor={post ? "bg-green-500":'bg-red-500'} className='w-full'>
                 {post?"Update":"Submit"}
             </Button>
+            
          
     </div>
    </form>

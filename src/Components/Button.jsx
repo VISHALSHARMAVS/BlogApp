@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 
 
 function Button({
@@ -10,7 +12,7 @@ function Button({
 
 }) {
   return (
-   <button className={`px-4 py2 rounded-full ${className}${bgColor}${textColor}`}{...props}>
+   <button className={`px-4 py2 rounded-full cursor-pointer ${bgColor}${textColor} ${className}`}{...props}>
     {children}
    </button>
   )
