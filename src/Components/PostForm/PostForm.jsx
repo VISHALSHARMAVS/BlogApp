@@ -21,7 +21,7 @@ function PostForm({post}) {
 
     const submit = async (data)=>{
         if (post) {
-            const file =  data.image[0] ? appwriteSevice.uploadFile(data.image[0]):null
+            const file =  data.image[0] ? await appwriteSevice.uploadFile(data.image[0]):null
             
 
           if (file) {
