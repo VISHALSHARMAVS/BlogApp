@@ -16,7 +16,7 @@ function Home() {
     {console.log(posts);}
     if (posts.length === 0) {
         return (
-            <div className="w-full py-8 mt-4 text-center">
+            <div className="w-full py-8 my-36 text-center">
                 <Container>
                     <div className="flex flex-wrap">
                         <div className=" p-2 w-full">
@@ -30,7 +30,7 @@ function Home() {
         )
     }else
     return (
-        <div className="w-full py-8">
+        <div className="w-full py-8 my-8">
             <Container>
                 <div className="flex flex-wrap">
                   {posts.map((post)=>
