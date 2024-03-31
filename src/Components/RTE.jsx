@@ -36,9 +36,9 @@ export default function RTE(
                    "media",
                    "table",
                    "help",
-                   "wrodcount",
+                   "wordcount",
                 ],
-              toolbar:"undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignight alignjustify | bullist numlist outdent indent | removeformate | help",
+              toolbar:"undo redo | blocks | image | bold italic forecolor | alignleft aligncenter  |  alignight alignjustify | bullist numlist outdent indent | removeformate | help",
               content_style : "body {font-family:Helvetica,Arial,sans-serif; font-size:14px}"
                 
             }}
