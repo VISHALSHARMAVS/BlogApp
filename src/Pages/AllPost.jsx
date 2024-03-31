@@ -1,18 +1,18 @@
 import appwriteService from "../Appwrite/config"
-import { PostCard,Container } from "../Components"
-import { useState } from "react"
+import { PostCard,Container } from "../Components/index"
+import { useState,useEffect } from "react"
 
 function AllPost() {
     const [posts,setPosts] =useState([])
-    // useEffect(()=>{
+    useEffect(()=>{
 
-    // })
-
-    appwriteService.getPosts([]).then((posts)=>{
-        if (posts) {
-            setPosts(posts.documents)
-        }
+        appwriteService.getPosts([]).then((posts)=>{
+            if (posts) {
+                setPosts(posts.documents)
+            }
+        })
     })
+
   return (
     <div className="w-full py-8">
         <Container>

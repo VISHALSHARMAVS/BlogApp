@@ -1,8 +1,8 @@
 import {useEffect,useState} from 'react'
 import { Link,useNavigate,useParams } from 'react-router-dom'
 import appwriteService from "../Appwrite/config"
-import { Button,Container } from '../Components'
-import parse from "react-html-parser"
+import { Button,Container } from '../Components/index'
+import parse from "html-react-parser"
 import {  useSelector } from 'react-redux'
 
 export default function Post() {
